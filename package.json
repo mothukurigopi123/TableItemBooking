@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mothukurigopi123.github.io/TableOrderBookings",
+  "homepage": "https://mothukurigopi123.github.io/TableOrderItems",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
