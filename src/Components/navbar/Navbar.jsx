@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 import { Storecontext } from '../../Context/Storecontext';
 
 const Navbar = () => {
-    const [menu, setMenu] = useState("menu");
+    const [menu, setMenu] = useState("home");
     const { gettotalcartamount } = useContext(Storecontext);
 
-    // Function to scroll to the top of the page
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
