@@ -31,18 +31,6 @@ const Exploremenu = ({ category, setCategory }) => {
         scrollInner.scrollLeft += e.deltaY;
     };
 
-    const scrollToItem = (index) => {
-        const scrollInner = scrollInnerRef.current;
-        const item = scrollInner.children[index];
-        if (item) {
-            const itemOffset = item.offsetLeft - (scrollInner.clientWidth / 2) + (item.clientWidth / 2);
-            scrollInner.scrollTo({
-                left: itemOffset,
-                behavior: 'smooth'
-            });
-        }
-    };
-
     return (
         <div className='explore-menu' id='explore-menu' onWheel={handleScroll}>
             <h1>Explore Our Menu</h1>
@@ -55,7 +43,6 @@ const Exploremenu = ({ category, setCategory }) => {
                         <div 
                             onClick={() => {
                                 setCategory(prev => prev === item.menu_name ? "All" : item.menu_name);
-                                scrollToItem(index);
                             }} 
                             key={index} 
                             className={`explore-menu-item ${category === item.menu_name ? "active" : ""}`} 

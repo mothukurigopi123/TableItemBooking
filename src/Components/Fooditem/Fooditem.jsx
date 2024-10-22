@@ -7,7 +7,7 @@ const Fooditem = ({ id, name, price, description, image }) => {
     const { cartitem, addtocart, removefromcart } = useContext(Storecontext);
 
     return (
-        <div className="food-item">
+        <div className="food-item" id={name.toLowerCase().replace(/\s+/g, '-')}> {/* ID for each category */}
             <div className="food-item-img-container">
                 <img src={image} alt={name} className="food-item-image" />
                 {!cartitem[id] ? (
